@@ -1,4 +1,4 @@
-iRunning Instructions:
+Running Instructions:
 =====================
 * Clone the contents of the project at
 
@@ -6,21 +6,36 @@ iRunning Instructions:
 ```cd <the directory you just unarchived>```
 * Within it you'll find:
     * *pom.xml*: maven project object model file, defines the project structure and dependencies
+    * *build.gradle*: gradle build file, defines the project build process and dependencies
     * *src/main/java*: production java sources for the project
     * *src/test/java*: test java sources for the project
-    * *target/*: output of the project build
+    * *target/*: output of the project build via maven
+    * *build/*: output of the project build via gradle
+    * *out/*: output of the project build via Intellij when imported via gradle
+
+Running koans from Maven:
+=========================
 * enter: ```mvn test``` to compile the project source and execute the tests
+
+Running koans from Gradle:
+==========================
+* enter: ```gradle test``` to compile the project source and execute the tests
 
 Running koans from Intellij IDEA:
 =================================
 * Open IDEA
 * Select the ```Import Project``` option from either the file menu or the welcome screen
-* Select pom.xml file for the project from the file menu
+* Select pom.xml file for the project from the file menu to import as a maven project
+* Select build.gradle file for the project from the file menu to import as a gradle project
 * Accept the defaults for the project import screens
-* To run the tests through maven 
+* To run the tests through maven (if imported as a maven project)
     * Open the maven projects tab on the right hand side
     * Select the maven-koans -> Lifecycle -> test item
     * Press the green "play" arrow at the top of the tab
+* To run the tests through gradle (if imported as a gradle project)
+    * Open the JetGradle tab on the right hand side
+    * Open tasks tab within the JetGradle Tab
+    * Doubleclick the test item
 * To run the tests via the IDEA test runner
     * Click the empy dropdown at the top center of the IDE window
     * Select the ```Edit Configurations ...``` option
