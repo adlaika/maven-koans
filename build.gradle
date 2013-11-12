@@ -1,0 +1,19 @@
+apply plugin: 'java'
+version = '0.0.1-SNAPSHOT'
+
+group = 'ca.genovese'
+version = '0.0.1-SNAPSHOT'
+
+test {
+  // enable TestNG support (default is JUnit)
+  useTestNG()
+  workingDir 'build/tmp'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+   testCompile 'org.testng:testng:6.8.7'
+}
